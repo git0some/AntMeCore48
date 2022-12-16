@@ -1,0 +1,331 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{81852336-3F17-4E67-8A44-658E04D77606}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>CoreTestClient</RootNamespace>
+    <AssemblyName>CoreTestClient</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>..\bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>antme.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BaseSceneControl.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="CampaignPreview.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CampaignPreview.Designer.cs">
+      <DependentUpon>CampaignPreview.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CodeGeneratorForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CodeGeneratorForm.Designer.cs">
+      <DependentUpon>CodeGeneratorForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EditorSceneControl.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="LevelSelectorForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LevelSelectorForm.Designer.cs">
+      <DependentUpon>LevelSelectorForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LoaderForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LoaderForm.Designer.cs">
+      <DependentUpon>LoaderForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ExtensionsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ExtensionsForm.Designer.cs">
+      <DependentUpon>ExtensionsForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LevelPreview.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="LevelPreview.Designer.cs">
+      <DependentUpon>LevelPreview.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LocalizationForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LocalizationForm.Designer.cs">
+      <DependentUpon>LocalizationForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainForm.Designer.cs">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MapControl.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="MapEditorForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MapEditorForm.Designer.cs">
+      <DependentUpon>MapEditorForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NewMapDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NewMapDialog.Designer.cs">
+      <DependentUpon>NewMapDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Renderer\TileRenderer.cs" />
+    <Compile Include="PlayerPreview.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="PlayerPreview.Designer.cs">
+      <DependentUpon>PlayerPreview.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PlayerSelectorForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PlayerSelectorForm.Designer.cs">
+      <DependentUpon>PlayerSelectorForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RenderControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="RenderControl.Designer.cs">
+      <DependentUpon>RenderControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Screens\GameModeScreen.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Screens\GameModeScreen.Designer.cs">
+      <DependentUpon>GameModeScreen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Screens\SingleGameControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Screens\SingleGameControl.Designer.cs">
+      <DependentUpon>SingleGameControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SettingsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SettingsForm.Designer.cs">
+      <DependentUpon>SettingsForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="StateSceneControl.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Tools\EditorTool.cs" />
+    <Compile Include="Tools\MapTileTool.cs" />
+    <Compile Include="Tools\MaterialTool.cs" />
+    <Compile Include="Tools\SelectionTool.cs" />
+    <Compile Include="Tools\StartPointTool.cs" />
+    <EmbeddedResource Include="CampaignPreview.resx">
+      <DependentUpon>CampaignPreview.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CodeGeneratorForm.resx">
+      <DependentUpon>CodeGeneratorForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LevelSelectorForm.resx">
+      <DependentUpon>LevelSelectorForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LoaderForm.resx">
+      <DependentUpon>LoaderForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ExtensionsForm.resx">
+      <DependentUpon>ExtensionsForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LevelPreview.resx">
+      <DependentUpon>LevelPreview.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LocalizationForm.resx">
+      <DependentUpon>LocalizationForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainForm.resx">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MapEditorForm.resx">
+      <DependentUpon>MapEditorForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NewMapDialog.resx">
+      <DependentUpon>NewMapDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PlayerPreview.resx">
+      <DependentUpon>PlayerPreview.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PlayerSelectorForm.resx">
+      <DependentUpon>PlayerSelectorForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RenderControl.resx">
+      <DependentUpon>RenderControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="Screens\SingleGameControl.resx">
+      <DependentUpon>SingleGameControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SettingsForm.resx">
+      <DependentUpon>SettingsForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.5.2">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.5.2 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="antme.ico" />
+    <Content Include="Resources\FlatMapTile.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\ConvexCliffMapTile.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\ConcaveCliffMapTile.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\select.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\start.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\WallCliffMapTile.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\RightRampToCliffMapTile.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\LeftRampToCliffMapTile.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\RampMapTile.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\LavaMaterial.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\StoneMaterial.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\SandMaterial.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\MudMaterial.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\GrasMaterial.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\src\AntMe.Core\AntMe.Core.csproj">
+      <Project>{a2a811c2-600d-451b-aa15-346bf7eced4a}</Project>
+      <Name>AntMe.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\src\AntMe.Generator\AntMe.Generator.csproj">
+      <Project>{fa3d1283-c79d-47a1-81af-265eb95d6d51}</Project>
+      <Name>AntMe.Generator</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\src\AntMe.Runtime\AntMe.Runtime.csproj">
+      <Project>{b15f5fbe-7460-4f89-ad30-cc3d135293b4}</Project>
+      <Name>AntMe.Runtime</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
